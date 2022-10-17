@@ -1,0 +1,27 @@
+body {
+    background-color: black;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1142px;
+    margin: 3rem auto;
+    justify-content: space-around;
+}
+
+h1{
+    color: white;
+    text-align: center;
+    margin: 2rem 0;
+
+}
+.cell {
+    width: calc(96% / 10 ) ;
+    aspect-ratio: 1/1;
+    border: 2px solid white;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
