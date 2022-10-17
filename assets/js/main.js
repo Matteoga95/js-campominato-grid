@@ -32,7 +32,7 @@ function generateField(max, domEl) {
 
         //per ogni ciclo mi definisco l'elemento
         //il numero da passare all'interno della cella è quello che sta ciclando dell'array
-        const cellaEl = generateCellMarkup(i)
+        const cellaEl = generateCellMarkup(i+1)
 
         //inserisco l'elemento creato nell'elemento della dom passato a parametro
         domEl.insertAdjacentElement('beforeend', cellaEl)
