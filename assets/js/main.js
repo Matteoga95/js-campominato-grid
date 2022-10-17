@@ -4,3 +4,26 @@
 // Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata.
 
 
+//genero la griglia
+
+//mi definsico il numero di celle che voglio creare
+const maxCells = 100
+//genero l'array del numero di celle che mi serve
+let cellsNumbers =[]
+
+for (let i = 1; i< (maxCells + 1) ;i++){
+    cellsNumbers.push(i)
+}
+
+
+
+//funzione che genera un elemento cella
+function generateCellMarkup() {
+
+    const cellEl = document.createElement('div')
+    cellEl.className = "cell";
+
+    return cellEl
+
+}
+
