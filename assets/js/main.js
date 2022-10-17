@@ -32,12 +32,23 @@ function generateField(max, domEl) {
 
         //per ogni ciclo mi definisco l'elemento
         //il numero da passare all'interno della cella è quello che sta ciclando dell'array
-        const cellaEl = generateCellMarkup(i+1)
+        const cellaEl = generateCellMarkup(i + 1)
 
         //inserisco l'elemento creato nell'elemento della dom passato a parametro
         domEl.insertAdjacentElement('beforeend', cellaEl)
 
-        console.log(cellaEl);
+
+        //adesso qua aggiungo un listener sulla cella con la function  per sistemare la classe active
+
+        cellaEl.addEventListener("click", function () {
+            console.log(this.innerText);
+
+            this.classList.toggle("active")        
+
+         })
+
+
+       
     }
 
 
