@@ -18,8 +18,19 @@ for (let i = 0; i < (maxCells); i++) {
 //mi definisco il container a cui devo aggiungere le celle
 const domContainer = document.querySelector(".container");
 
-//chiamo la funzione che genera le celle
-generateField(maxCells, domContainer)
+
+//chiamo la funzione che genera le celle ma solo quando si clicca sul bottone
+
+//mi definisco il bottone
+const generaButton = document.querySelector("button");
+
+//aggiungo listener
+generaButton.addEventListener("click", function () {
+
+    //chiamo la funzione che genera le celle
+    generateField(maxCells, domContainer);
+
+})
 
 
 
@@ -32,10 +43,10 @@ function generateField(max, domEl) {
 
         //per ogni ciclo mi definisco l'elemento
         //il numero da passare all'interno della cella è quello che sta ciclando dell'array
-        const cellaEl = generateCellMarkup(i + 1)
+        const cellaEl = generateCellMarkup(i + 1);
 
         //inserisco l'elemento creato nell'elemento della dom passato a parametro
-        domEl.insertAdjacentElement('beforeend', cellaEl)
+        domEl.insertAdjacentElement('beforeend', cellaEl);
 
 
         //adesso qua aggiungo un listener sulla cella con la function  per sistemare la classe active
@@ -43,10 +54,10 @@ function generateField(max, domEl) {
         cellaEl.addEventListener("click", function () {
             console.log(this.innerText);
 
-            this.classList.toggle("active")        
+            this.classList.toggle("active");
 
-         })
-       
+        })
+
     }
 
 }
@@ -57,7 +68,7 @@ function generateCellMarkup(numb) {
 
     const cellEl = document.createElement('div');
     cellEl.className = "cell";
-    cellEl.innerText = numb
+    cellEl.innerText = numb;
     return cellEl;
 
 }

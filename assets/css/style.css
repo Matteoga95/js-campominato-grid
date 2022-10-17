@@ -40,8 +40,10 @@ button{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: bold;
+    font-size: 28px;
 }
 
 .cell.active{
-    background-color: rgb(4, 177, 240);
+    background-color: rgb(71, 162, 195);
 }
