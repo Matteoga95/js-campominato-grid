@@ -19,7 +19,7 @@ for (let i = 0; i < (maxCells); i++) {
 const domContainer = document.querySelector(".container");
 
 //chiamo la funzione che genera le celle
-generateField(maxCells,domContainer)
+generateField(maxCells, domContainer)
 
 
 
@@ -28,10 +28,11 @@ function generateField(max, domEl) {
 
 
     //ciclo i numeri di volte che devo creare la cella
-    for (let i = 0; i < max; i++ ){
+    for (let i = 0; i < max; i++) {
 
         //per ogni ciclo mi definisco l'elemento
-        const cellaEl = generateCellMarkup()
+        //il numero da passare all'interno della cella è quello che sta ciclando dell'array
+        const cellaEl = generateCellMarkup(i)
 
         //inserisco l'elemento creato nell'elemento della dom passato a parametro
         domEl.insertAdjacentElement('beforeend', cellaEl)
@@ -44,11 +45,12 @@ function generateField(max, domEl) {
 }
 
 //funzione che genera un elemento cella
-function generateCellMarkup() {
+//passo alla funzione il numero cehe deve essere visualizzato all'interno della cella
+function generateCellMarkup(numb) {
 
     const cellEl = document.createElement('div');
     cellEl.className = "cell";
-
+    cellEl.innerText = numb
     return cellEl;
 
 }
