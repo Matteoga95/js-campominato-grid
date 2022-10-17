@@ -25,3 +25,7 @@ h1{
     justify-content: center;
     align-items: center;
 }
+
+.cell.active{
+    background-color: rgb(4, 177, 240);
+}
