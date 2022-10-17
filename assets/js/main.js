@@ -46,12 +46,8 @@ function generateField(max, domEl) {
             this.classList.toggle("active")        
 
          })
-
-
        
     }
-
-
 
 }
 
